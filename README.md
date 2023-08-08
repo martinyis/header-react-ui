@@ -40,9 +40,30 @@ const App = () => {
 export default App;
 ```
 
-## Props:
+## Props
 
-| Prop Name | Type | Default Value | Description |
+Each component accepts a set of props that allow you to customize its behavior and appearance. Here's a list of available props for each component:
+
+### ComponentName
+
+| Prop Name     | Type        | Default Value  | Description                                           |
+| ------------- | ----------- | -------------- | ----------------------------------------------------- |
+| `propName`    | `PropTypes` | `defaultValue` | Description of what this prop does and how to use it. |
+| `anotherProp` | `PropTypes` | `defaultValue` | Another prop's description.                           |
+
+**Example:**
+
+```jsx
+import { ComponentName } from 'your-react-ui-library';
+
+function App() {
+  return (
+    <ComponentName
+      propName={propValue}
+      anotherProp={anotherPropValue}
+    />
+  );
+}
 
 ## Contributing:
 
@@ -52,3 +73,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License:
 
 [MIT](https://choosealicense.com/licenses/mit/)
+```
