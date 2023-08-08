@@ -59,3 +59,36 @@ git push origin <branch-name>
 3. Once your Pull Request is approved, it will be merged into the main branch.
 
 Thank you for your valuable contribution to header-react-ui! We look forward to your enhancements and improvements.
+
+## Testing
+
+### Run tests
+
+Ensure that your new feature or changes are properly tested. To run the tests, run the following command:
+
+```bash
+npm run test
+```
+
+### Run storybook locally
+
+To run storybook locally, run the following command:
+
+```bash
+npm run storybook
+```
+
+### Build storybook
+
+To build storybook, run the following command:
+
+```bash
+
+npm run build-storybook
+```
+
+### Build the library
+
+```
+npm run rollup
+```
