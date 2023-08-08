@@ -1,3 +1,5 @@
+@import "Logo.scss";
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
@@ -19,6 +21,7 @@ ul {
 
 .header {
   //max-w-[1400px] mx-auto px-10 md:px-5
+  padding-top: 0;
   width: 100%;
   max-width: 1400px;
   margin-left: auto;
@@ -56,9 +59,6 @@ ul {
   @media (max-width: 768px) {
     display: block;
   }
-}
-.logo {
-  color: black;
 }
 .mobileNavBlock {
   //flex items-center justify-between items-center mt-10

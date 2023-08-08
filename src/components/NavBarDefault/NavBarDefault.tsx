@@ -1,8 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Squash as Hamburger } from "hamburger-react";
-import "./NavBarDefault.scss";
-const NavbarDefault = () => {
+import "./styles/NavBarDefault.scss";
+
+export interface Props {
+  logo: React.ReactNode;
+  maxHeight?: number;
+  bgColor?: string;
+  bgMobile?: string;
+}
+const NavbarDefault = (props: Props) => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
   const handleLinkClick = (): void => {
     setNavbarOpen(false);
@@ -24,8 +31,14 @@ const NavbarDefault = () => {
 
   return (
     <header className="header">
-      <nav className="deskTopNav">
-        <h1>Logo</h1>
+      <nav
+        className="deskTopNav"
+        style={{
+          maxHeight: props.maxHeight ? props.maxHeight + "px" : "100px",
+          backgroundColor: props.bgColor ? props.bgColor : "",
+        }}
+      >
+        <div className="logo">{props.logo}</div>
         <ul className="deskTopUl">
           {links.map((link, id) => (
             <li className="deskTopLi" key={id}>
@@ -38,7 +51,7 @@ const NavbarDefault = () => {
       </nav>
       <nav className="mobileNav">
         <div className="mobileNavBlock">
-          <h1 className="logo">Logo</h1>
+          <div className="logo">{props.logo}</div>
           <div className="hamburger">
             <Hamburger
               toggled={navbarOpen}
@@ -51,7 +64,10 @@ const NavbarDefault = () => {
         </div>
         <div
           className={`mobileNavMenu ${navbarOpen ? "showMenu" : "hideMenu"}`}
-          style={{ transition: "transform 0.3s ease-in-out" }}
+          style={{
+            transition: "transform 0.3s ease-in-out",
+            backgroundColor: props.bgMobile ? props.bgMobile : "",
+          }}
         >
           <ul className="mobileNavUl">
             {links.map((link, id) => (

@@ -1,0 +1,18 @@
+.logo {
+  color: black;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+//meadia below
+@media (max-width: 768px) {
+  .logo {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    max-width: 200px;
+  }
+}

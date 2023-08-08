@@ -1,16 +1,58 @@
-// TestDiv.stories.tsx
 import React from "react";
 import { Story, Meta } from "@storybook/react";
-import NavBarDefault from "./NavBarDefault";
+import { Squash as Hamburger } from "hamburger-react";
+import NavbarDefault, { Props } from "./NavBarDefault";
 
-// Create a meta description for the TestDiv component
 export default {
-  title: "NavBars/NavBarDefault",
-  component: NavBarDefault,
+  title: "Components/NavbarDefault",
+  component: NavbarDefault,
 } as Meta;
 
-// Create a template for the component story
-const Template: Story = (args) => <NavBarDefault {...args} />;
+const Template: Story<Props> = (args) => <NavbarDefault {...args} />;
 
-// Define your component stories with different variations
 export const Default = Template.bind({});
+Default.args = {
+  logo: <div>Your Logo Here</div>,
+  maxHeight: 100,
+  bgColor: "#f4f50f",
+};
+
+export const NoProps = Template.bind({});
+NoProps.args = {};
+
+export const NoLogo = Template.bind({});
+NoLogo.args = {
+  maxHeight: 100,
+  bgColor: "#f4f50f",
+};
+
+export const NoMaxHeight = Template.bind({});
+NoMaxHeight.args = {
+  logo: <div>Your Logo Here</div>,
+  bgColor: "#f4f50f",
+};
+
+export const NoBgColor = Template.bind({});
+
+NoBgColor.args = {
+  logo: <div>Your Logo Here</div>,
+  maxHeight: 100,
+};
+//big height
+
+export const BigHeight = Template.bind({});
+BigHeight.args = {
+  logo: <div>Your Logo Here</div>,
+  maxHeight: 600,
+  bgColor: "#f4f50f",
+};
+
+//bgmovile
+
+export const BgMobile = Template.bind({});
+BgMobile.args = {
+  logo: <div>Your Logo Here</div>,
+  maxHeight: 100,
+  bgColor: "#f4f50f",
+  bgMobile: "#f4f50f",
+};
