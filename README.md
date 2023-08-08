@@ -28,13 +28,7 @@ import React from "react";
 import { NavBarDefault } from "header-react-ui";
 
 const App = () => {
-  return (
-    <NavBarDefault
-      logo="https://i.imgur.com/9IwJW2u.png"
-      logoAlt="logo"
-      logoLink=""
-    />
-  );
+  return <NavBarDefault logo={<div>Your Logo Here</div>} />;
 };
 
 export default App;
