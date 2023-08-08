@@ -46,24 +46,19 @@ Each component accepts a set of props that allow you to customize its behavior a
 
 ### ComponentName
 
-| Prop Name     | Type        | Default Value  | Description                                           |
-| ------------- | ----------- | -------------- | ----------------------------------------------------- |
-| `propName`    | `PropTypes` | `defaultValue` | Description of what this prop does and how to use it. |
-| `anotherProp` | `PropTypes` | `defaultValue` | Another prop's description.                           |
+| Prop Name | Type        | Default Value               | Description                                     |
+| --------- | ----------- | --------------------------- | ----------------------------------------------- |
+| `logo`    | `ReactNode` | `<div>Your Logo Here</div>` | Logo displayed on the left side of the sidebar. |
 
 **Example:**
 
 ```jsx
-import { ComponentName } from 'your-react-ui-library';
-
+import { ComponentName } from "your-react-ui-library";
+const logo = <div>Your Logo Here</div>;
 function App() {
-  return (
-    <ComponentName
-      propName={propValue}
-      anotherProp={anotherPropValue}
-    />
-  );
+  return <NavBarDefault logo={logo} />;
 }
+```
 
 ## Contributing:
 
@@ -73,4 +68,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License:
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+```
+
 ```
