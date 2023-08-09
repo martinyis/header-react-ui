@@ -10,49 +10,17 @@ export default {
 
 const Template: Story<Props> = (args) => <NavbarDefault {...args} />;
 
+// Story: Introducing the NavbarDefault Component
 export const Default = Template.bind({});
 Default.args = {
-  logo: <div>Your Logo Here</div>,
+  logo: <h1>Logo</h1>,
   maxHeight: 100,
-  bgColor: "#f4f50f",
-};
-
-export const NoProps = Template.bind({});
-NoProps.args = {};
-
-export const NoLogo = Template.bind({});
-NoLogo.args = {
-  maxHeight: 100,
-  bgColor: "#f4f50f",
-};
-
-export const NoMaxHeight = Template.bind({});
-NoMaxHeight.args = {
-  logo: <div>Your Logo Here</div>,
-  bgColor: "#f4f50f",
-};
-
-export const NoBgColor = Template.bind({});
-
-NoBgColor.args = {
-  logo: <div>Your Logo Here</div>,
-  maxHeight: 100,
-};
-//big height
-
-export const BigHeight = Template.bind({});
-BigHeight.args = {
-  logo: <div>Your Logo Here</div>,
-  maxHeight: 600,
-  bgColor: "#f4f50f",
-};
-
-//bgmovile
-
-export const BgMobile = Template.bind({});
-BgMobile.args = {
-  logo: <div>Your Logo Here</div>,
-  maxHeight: 100,
-  bgColor: "#f4f50f",
-  bgMobile: "#f4f50f",
+  bgColor: "#ffffff",
+  bgMobile: "#ffffff",
+  items: [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Contact", link: "/contact" },
+  ],
+  position: "center",
 };

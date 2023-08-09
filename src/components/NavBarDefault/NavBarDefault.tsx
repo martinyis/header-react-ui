@@ -2,23 +2,33 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 import "./styles/NavBarDefault.scss";
+import Nav from "./blocks/Nav";
 
+export type Typelinks = {
+  name: string;
+  link: string;
+};
 export interface Props {
   logo: React.ReactNode;
   maxHeight?: number;
   bgColor?: string;
   bgMobile?: string;
+  items?: Typelinks[];
+  position?: string;
+  button?: React.ReactNode;
 }
 const NavbarDefault = (props: Props) => {
   const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
   const handleLinkClick = (): void => {
     setNavbarOpen(false);
   };
-  const links = [
-    { name: "Home", link: "/" },
-    { name: "About", link: "/about" },
-    { name: "Contact", link: "/contact" },
-  ];
+  const links = props.items
+    ? props.items
+    : [
+        { name: "Home", link: "/" },
+        { name: "About", link: "/about" },
+        { name: "Contact", link: "/contact" },
+      ];
   useEffect(() => {
     const handleScrollLock = () => {
       document.body.style.overflow = navbarOpen ? "hidden" : "auto";
@@ -31,24 +41,7 @@ const NavbarDefault = (props: Props) => {
 
   return (
     <header className="header">
-      <nav
-        className="deskTopNav"
-        style={{
-          maxHeight: props.maxHeight ? props.maxHeight + "px" : "100px",
-          backgroundColor: props.bgColor ? props.bgColor : "",
-        }}
-      >
-        <div className="logo">{props.logo}</div>
-        <ul className="deskTopUl">
-          {links.map((link, id) => (
-            <li className="deskTopLi" key={id}>
-              <a className="deskTopLi" href={link.link}>
-                {link.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <Nav {...props} />
       <nav className="mobileNav">
         <div className="mobileNavBlock">
           <div className="logo">{props.logo}</div>
@@ -78,6 +71,11 @@ const NavbarDefault = (props: Props) => {
               </li>
             ))}
           </ul>
+          {props.button ? (
+            <div className="mobileNavButton">{props.button}</div>
+          ) : (
+            <button className="mobileNavButton">Button</button>
+          )}
         </div>
       </nav>
     </header>

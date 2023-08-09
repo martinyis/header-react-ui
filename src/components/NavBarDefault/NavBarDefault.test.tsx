@@ -32,3 +32,42 @@ describe("NavBarDefault", () => {
     render(<NavbarDefault logo={logo} bgMobile={"#f4f50f"} />);
   });
 });
+
+//items
+describe("NavBarDefault", () => {
+  test("renders NavBarDefault component", () => {
+    render(
+      <NavbarDefault
+        logo={logo}
+        items={[
+          { name: "Home", link: "/" },
+          { name: "About", link: "/about" },
+          { name: "Contact", link: "/contact" },
+        ]}
+      />
+    );
+  });
+});
+
+//position
+describe("NavBarDefault", () => {
+  test("renders NavBarDefault component", () => {
+    render(<NavbarDefault logo={logo} position={"center"} />);
+  });
+});
+
+//position
+describe("NavBarDefault", () => {
+  test("renders NavBarDefault component", () => {
+    render(<NavbarDefault logo={logo} position={"left"} />);
+  });
+});
+
+//position
+describe("NavBarDefault", () => {
+  test("renders NavBarDefault component", () => {
+    render(<NavbarDefault logo={logo} position={"right"} />);
+  });
+});
+
+//button added
