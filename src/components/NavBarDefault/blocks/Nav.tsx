@@ -35,11 +35,7 @@ const Nav = (props: Props) => {
                 </li>
               ))}
             </ul>
-            {props.button ? (
-              <div className="mobileNavButton">{props.button}</div>
-            ) : (
-              <button className="mobileNavButton">Button</button>
-            )}
+            {props.button ? <div>{props.button}</div> : <button>Button</button>}
           </div>
         </>
       ) : props.position === "left" ? (
@@ -62,11 +58,7 @@ const Nav = (props: Props) => {
               ))}
             </ul>
           </div>
-          {props.button ? (
-            <div className="mobileNavButton">{props.button}</div>
-          ) : (
-            <button className="mobileNavButton">Button</button>
-          )}
+          {props.button ? <div>{props.button}</div> : <button>Button</button>}
         </>
       ) : (
         <>
@@ -80,11 +72,7 @@ const Nav = (props: Props) => {
               </li>
             ))}
           </ul>
-          {props.button ? (
-            <div className="mobileNavButton">{props.button}</div>
-          ) : (
-            <button className="mobileNavButton">Button</button>
-          )}
+          {props.button ? <div>{props.button}</div> : <button>Button</button>}
         </>
       )}
     </nav>
