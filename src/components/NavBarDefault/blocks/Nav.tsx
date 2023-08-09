@@ -13,7 +13,6 @@ const Nav = (props: Props) => {
       className="deskTopNav"
       style={{
         maxHeight: props.maxHeight ? props.maxHeight + "px" : "100px",
-        backgroundColor: props.bgColor ? props.bgColor : "",
       }}
     >
       {props.position === "right" ? (

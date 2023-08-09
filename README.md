@@ -21,8 +21,6 @@ npm install header-react-ui
 
 > For now we have only one component and it is `<NavBarDefault/>`, but we will add more components in the future.
 
-//jsx
-
 ```jsx
 import React from "react";
 import { NavBarDefault } from "header-react-ui";
@@ -40,9 +38,15 @@ Each component accepts a set of props that allow you to customize its behavior a
 
 ### ComponentName
 
-| Prop Name | Type        | Default Value               | Description                                     |
-| --------- | ----------- | --------------------------- | ----------------------------------------------- |
-| `logo`    | `ReactNode` | `<div>Your Logo Here</div>` | Logo displayed on the left side of the sidebar. |
+| Prop Name   | Type                          | Default Value                                                                                               | Description                                                                                                    |
+| ----------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| items       | Array of objects (name, link) | `[ { name: "Home", link: "/" }, { name: "About", link: "/about" }, { name: "Contact", link: "/contact" } ]` | Navigation items for the sidebar.                                                                              |
+| `logo`      | `ReactNode`                   | `<div>Your Logo Here</div>`                                                                                 | Logo displayed on the left side of the sidebar.                                                                |
+| `maxHeight` | `number`                      | `100px`                                                                                                     | Maximum height of the header.                                                                                  |
+| `bgColor`   | `string`                      | `rgb(213, 248, 248)`                                                                                        | The color of the background for large devices.                                                                 |
+| `bgMobile`  | `string`                      | `rgb(213, 248, 248)`                                                                                        | The color of the background for small devices.                                                                 |
+| `position`  | `string`                      | `center`                                                                                                    | The postion of the navlinks for the navbar. See example below. All possible values ('left', 'right', 'center') |
+| `button`    | `ReactNode`                   | `<button>button<button/>`                                                                                   | Pass any button you want to see on the right side of the navbar                                                |
 
 **Example:**
 

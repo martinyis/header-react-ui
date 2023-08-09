@@ -30,10 +30,8 @@ ul {
   //max-w-[1400px] mx-auto px-10 md:px-5
   padding-top: 0;
   width: 100%;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 10px;
+  background-color: rgb(213, 248, 248);
   @media (max-width: 768px) {
     padding-left: 0px;
     padding-right: 0px;
@@ -42,6 +40,9 @@ ul {
 
 .deskTopNav {
   //flex md:hidden h-[204px] justify-between items-center text-white text-[23px]
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   height: 204px;
   justify-content: space-between;
@@ -91,7 +92,7 @@ ul {
   padding: 0;
   position: absolute;
   top: 0;
-  background-color: #a5a4a4;
+  background-color: rgb(213, 248, 248);
   height: 100vh;
   transform: translateY(-100%);
 }
@@ -115,7 +116,7 @@ ul {
 }
 
 .mobileNavButton {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

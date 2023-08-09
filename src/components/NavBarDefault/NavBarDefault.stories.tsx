@@ -23,4 +23,5 @@ Default.args = {
     { name: "Contact", link: "/contact" },
   ],
   position: "center",
+  button: <button>Button</button>,
 };

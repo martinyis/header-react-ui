@@ -40,7 +40,12 @@ const NavbarDefault = (props: Props) => {
   }, [navbarOpen]);
 
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{
+        backgroundColor: props.bgColor ? props.bgColor : "",
+      }}
+    >
       <Nav {...props} />
       <nav className="mobileNav">
         <div className="mobileNavBlock">
