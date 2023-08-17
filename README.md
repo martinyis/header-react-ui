@@ -70,3 +70,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ```
 
 ```
+
+### Keywords:
+
+React Header Ui Library React header library, navigation bar, header components, UI components, responsive design, web development, front-end development, navigation menu, mobile-friendly, branding, logo, links, menu items, customizable headers, user interface, modern web, accessibility, styling, theming, cross-browser compatibility, developer-friendly, code reusability, navigation UI, navigation layout, navigation styles, navigation options, header customization, header styles, header theming, header examples, header installation, header usage, header component, header design, header npm package, header version, header updates, header support, header community, open-source, license, MIT license.
